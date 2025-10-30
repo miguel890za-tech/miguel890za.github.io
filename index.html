@@ -1,51 +1,35 @@
+<!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Integración de Páginas Web</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-        }
-
-        .button-container {
-            margin-top: 20px;
-        }
- 
-        button {
-            margin: 10px;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        iframe {
-            width: 90%;
-            height: 600px;
-            margin-top: 20px;
-            border: 1px solid #ccc;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Integración de Páginas Web</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; margin: 0; padding: 0; }
+    .button-container { margin-top: 20px; }
+    button { margin: 10px; padding: 10px 20px; font-size: 16px; cursor: pointer; }
+    iframe { width: 90%; height: 600px; margin-top: 20px; border: 1px solid #ccc; }
+  </style>
 </head>
 <body>
+  <h1>Explora las siguientes páginas</h1>
 
-    <h1>Explora las siguientes páginas</h1>
+  <div class="button-container">
+    <button onclick="cargarPagina('cuestionario.html')">Formulario</button>
+    <button onclick="cargarPagina('sopa.html')">Juego</button>
+    <button onclick="cargarPagina('principal.html')">Principal</button>
+  </div>
 
-    <div class="button-container">
-        <button onclick="cargarPagina('file:///C:/Users/HP/Downloads/cuestionario%20de%20danza%20-%20copia.html')">Formulario</button>
-        <button onclick="cargarPagina('file:///C:/Users/HP/Downloads/sopa%20de%20letras.html')">Juego</button>
-        <button onclick="cargarPagina('file:///C:/Users/HP/Downloads/miguel%20angel%20mena%20(1).html')">Principal</button>
-    </div>
+  <iframe id="visor" src="" title="Visor de páginas"></iframe>
 
-    <iframe id="visor" src="" title="Visor de páginas"></iframe>
+  <script>
+    function cargarPagina(url) {
+      document.getElementById('visor').src = url;
+    }
+  </script>
+</body>
+</html>
 
-    <script>
-        function cargarPagina(url) {
-            document.getElementById('visor').src = url;
-        }
-    </script>
 
 </body>
+
 </html>
